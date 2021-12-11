@@ -1,10 +1,10 @@
 package homework4;
 
-public class Subscribers {
+public class Subscriber {
     String name;
     String phone;
 
-    public Subscribers(String name, String phone) {
+    public Subscriber(String name, String phone) {
         this.name = name;
         this.phone = phone;
     }

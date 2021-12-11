@@ -1,7 +1,5 @@
 package homework4;
 
-import com.sun.net.httpserver.Headers;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -52,18 +50,18 @@ public class Homework4 {
 
     private static void addSearchSubscriber() {
         // телефонный справочник
-        Subscribers subscriber1 = new Subscribers("Иванов Иван Иванович", "7777770000");
-        Subscribers subscriber2 = new Subscribers("Иванов Иван Иванович", "7777770021");
-        Subscribers subscriber3 = new Subscribers("Петров Петр Петрович", "7767777007");
-        Subscribers subscriber4 = new Subscribers("Иванова Иванесса Ивановна", "7887770100");
-        Subscribers subscriber5 = new Subscribers("Иванова Иванесса Ивановна", "7777770000");
-        Subscribers subscriber6 = new Subscribers("Иванова Иванесса Ивановна", "7757778800");
-        Subscribers subscriber7 = new Subscribers("Козлов Иван Петрович", "7477774444");
-        Subscribers subscriber8 = new Subscribers("Иванов Петр Иванович", "7977771111");
+        Subscriber subscriber1 = new Subscriber("Иванов Иван Иванович", "7777770000");
+        Subscriber subscriber2 = new Subscriber("Иванов Иван Иванович", "7777770021");
+        Subscriber subscriber3 = new Subscriber("Петров Петр Петрович", "7767777007");
+        Subscriber subscriber4 = new Subscriber("Иванова Иванесса Ивановна", "7887770100");
+        Subscriber subscriber5 = new Subscriber("Иванова Иванесса Ивановна", "7777770000");
+        Subscriber subscriber6 = new Subscriber("Иванова Иванесса Ивановна", "7757778800");
+        Subscriber subscriber7 = new Subscriber("Козлов Иван Петрович", "7477774444");
+        Subscriber subscriber8 = new Subscriber("Иванов Петр Иванович", "7977771111");
 
 
         //запись данных Абонентов в Справочник
-        ArrayList<Subscribers>  helpDesk = new ArrayList<>();
+        ArrayList<Subscriber>  helpDesk = new ArrayList<>();
         helpDesk.add(subscriber1);
         helpDesk.add(subscriber2);
         helpDesk.add(subscriber3);
@@ -78,12 +76,12 @@ public class Homework4 {
     }
 
 
-    private static void getPhoneSubscriber(ArrayList<Subscribers> helpDesk) {
+    private static void getPhoneSubscriber(ArrayList<Subscriber> helpDesk) {
         String  searchGender = "Иванова Иванесса Ивановна";
         int count = 0;
-        for (Subscribers subscribers : helpDesk) {
+        for (Subscriber subscribers : helpDesk) {
             if (searchGender.equals(subscribers.getName())) {
-                System.out.println(subscribers.phone);
+                System.out.println(subscribers.getPhone());
                 count++;
             }
         }
